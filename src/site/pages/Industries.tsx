@@ -1,4 +1,5 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import IndustryIllustration from "@/site/components/IndustryIllustration";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";

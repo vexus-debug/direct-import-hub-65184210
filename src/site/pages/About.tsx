@@ -1,4 +1,5 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
 import { Shield, Zap, Heart, Lightbulb, CheckCircle2, ArrowRight, Target, Globe, Award, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
