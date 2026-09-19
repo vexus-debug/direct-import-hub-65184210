@@ -167,36 +167,17 @@ const Industries = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[hsl(var(--medical-blue-dark))] py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          {[600, 450, 300].map((size, i) => (
-            <div key={i} className="absolute rounded-full border border-white/[0.05]" style={{ width: size, height: size }} />
-          ))}
-        </div>
-        <div className="pointer-events-none absolute inset-0 " />
-
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-[hsl(var(--medical-teal))]">
-              Industries We Serve
-            </span>
-            <h1 className="mb-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl">
-              Built for{" "}
-              <span className="bg-primary ">
-                Your Kind of Clinic
-              </span>
-            </h1>
-            <p className="mx-auto max-w-xl text-lg leading-relaxed text-white/60">
-              We know every specialty is different. That's why Clinexus adapts to your workflows, not the other way around. Find your practice below.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Industries we serve"
+        title="Built for your kind of clinic."
+        description="We know every specialty is different. That's why Clinexus adapts to your workflows, not the other way around. Find your practice below."
+        primaryCta={{ label: "Get Started", href: "https://wa.me/2349017758165", external: true }}
+        points={[
+          { value: "11+", label: "Specialties supported out of the box" },
+          { value: "24 hrs", label: "From signup to a live clinic workspace" },
+          { value: "1", label: "System for patients, billing, stock and staff" },
+        ]}
+      />
 
       {/* Industries Grid */}
       <section className="relative site-section-light overflow-hidden py-24">

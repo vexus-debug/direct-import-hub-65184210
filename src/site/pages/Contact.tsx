@@ -25,36 +25,17 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[hsl(var(--medical-blue-dark))] py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          {[600, 450, 300].map((size, i) => (
-            <div key={i} className="absolute rounded-full border border-white/[0.05]" style={{ width: size, height: size }} />
-          ))}
-        </div>
-        <div className="pointer-events-none absolute inset-0 " />
-
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-[hsl(var(--medical-teal))]">
-              Contact Us
-            </span>
-            <h1 className="mb-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl">
-              Tell Us What's Slowing{" "}
-              <span className="bg-primary ">
-                Your Clinic Down
-              </span>
-            </h1>
-            <p className="mx-auto max-w-xl text-lg leading-relaxed text-white/60">
-              Want a demo, have questions, or need something specific? Our team is ready to help you get your time and money back.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Contact us"
+        title="Tell us what's slowing your clinic down."
+        description="Want a demo, have questions, or need something specific? Our team is ready to help you get your time and money back."
+        primaryCta={{ label: "Chat on WhatsApp", href: "https://wa.me/2349017758165", external: true }}
+        points={[
+          { value: "24 hrs", label: "Response time on every message" },
+          { value: "30 min", label: "Personalized walkthrough when you ask for a demo" },
+          { value: "<2 hrs", label: "Average in-app support response for customers" },
+        ]}
+      />
 
       {/* Form + Info */}
       <section className="relative site-section-light overflow-hidden py-24">

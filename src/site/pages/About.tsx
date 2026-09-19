@@ -50,37 +50,17 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[hsl(var(--medical-blue-dark))] py-24 md:py-36">
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          {[700, 500, 300].map((size, i) => (
-            <div key={i} className="absolute rounded-full border border-white/[0.04]" style={{ width: size, height: size }} />
-          ))}
-        </div>
-        <div className="pointer-events-none absolute inset-0 " />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.12),transparent_60%)]" />
-
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <span className="mb-5 inline-block rounded-full border border-[hsl(var(--medical-teal))/30] bg-[hsl(var(--medical-teal))/10] px-4 py-1.5 text-sm font-semibold uppercase tracking-widest text-[hsl(var(--medical-teal))]">
-              About Clinexus
-            </span>
-            <h1 className="mb-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl">
-              We Help You Run a{" "}
-              <span className="bg-primary ">
-                Calmer, More Profitable Clinic
-              </span>
-            </h1>
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/60">
-              Clinexus is Nigeria's dedicated clinic management platform, built to end the daily chaos and give you back control, and your evenings.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About Clinexus"
+        title="We help you run a calmer, more profitable clinic."
+        description="Clinexus is Nigeria's dedicated clinic management platform, built to end the daily chaos and give you back control, and your evenings."
+        primaryCta={{ label: "Get Started", href: APP_URL, external: true }}
+        points={[
+          { value: "500+", label: "Clinics trust us" },
+          { value: "1.2M+", label: "Patients managed" },
+          { value: "99.9%", label: "Uptime guarantee" },
+        ]}
+      />
 
       {/* Story */}
       <section className="relative site-section-light overflow-hidden py-24">
