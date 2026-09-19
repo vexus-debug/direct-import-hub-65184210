@@ -204,7 +204,7 @@ export function useUpdateClinicSettings() {
       if (siteSettings !== undefined) {
         payload.settings = siteSettings;
       }
-      const { error } = await supabase.from("organizations").update(payload).eq("id", id);
+      const { error } = await supabase.from("organizations").update(payload as never).eq("id", id);
       if (error) throw error;
     },
     onSuccess: () => {
