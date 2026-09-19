@@ -21,23 +21,16 @@ const Terms = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[hsl(var(--medical-blue-dark))] py-20 md:py-28">
-        <div className="pointer-events-none absolute inset-0 " />
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[hsl(var(--primary))]/20">
-              <FileText className="h-7 w-7 text-[hsl(var(--medical-teal))]" />
-            </div>
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">Terms of Service</h1>
-            <p className="text-white/60">Last updated: February 2026</p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Terms of service"
+        title="Plain-language terms, no lawyer required."
+        description="Last updated: February 2026. These terms govern your use of Clinexus, written clearly because legal documents shouldn't need translation."
+        points={[
+          { value: "99.9%", label: "Uptime target on all paid plans" },
+          { value: "30 days", label: "To export your data after cancellation" },
+          { value: "₦", label: "Billed in Naira, monthly or annually" },
+        ]}
+      />
 
       {/* Content */}
       <section className="relative site-section-light overflow-hidden py-20">
