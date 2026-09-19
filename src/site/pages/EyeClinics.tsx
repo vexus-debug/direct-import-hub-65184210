@@ -75,76 +75,20 @@ const included = [
 const EyeClinics = () => {
   return (
     <Layout>
+      <PageHero
+        eyebrow="Clinexus for eye clinics"
+        title="You fix eyes all day. The paperwork shouldn't be your hardest job."
+        description="Clinexus puts your exams, refractions, diagnostics, lens dispensing, surgeries and everyday admin in one simple place, so nothing slips through."
+        primaryCta={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+        secondaryCta={{ label: "See the full feature list", href: "/industries/eye-clinics/features" }}
+        points={[
+          { value: "3–4 hrs", label: "Admin time given back each day" },
+          { value: "40%", label: "Fewer no-shows with automatic reminders" },
+          { value: "9", label: "Staff roles with their own access" },
+        ]}
+      />
       <div className="eye-theme overflow-x-hidden">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-24">
-          {/* Hero */}
-          <header className="mb-16 text-center lg:mb-24">
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-primary"
-            >
-              Clinexus for Eye Clinics
-            </motion.p>
-
-            <motion.h1
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              className="mx-auto mb-6 max-w-4xl text-3xl font-bold leading-tight text-foreground sm:text-4xl md:mb-8 md:text-6xl"
-            >
-              You fix eyes all day.{" "}
-              <span className="text-primary">The paperwork shouldn't be your hardest job.</span>
-            </motion.h1>
-
-            <motion.p
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              transition={{ delay: 0.2 }}
-              className="mx-auto mb-10 max-w-2xl leading-relaxed text-muted-foreground/80"
-            >
-              Clinexus puts your exams, refractions, diagnostics, lens dispensing, surgeries and everyday
-              admin in one simple place, so nothing slips through.
-            </motion.p>
-
-            <motion.div
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center"
-            >
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-4 font-bold text-primary-foreground transition-colors hover:bg-foreground sm:w-auto sm:px-10"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Talk to us on WhatsApp
-              </a>
-              <Link
-                to="/industries/eye-clinics/features"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary px-6 py-4 font-bold text-primary transition-colors hover:bg-primary/10 sm:w-auto sm:px-10"
-              >
-                See the full feature list
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </motion.div>
-
-            <motion.p
-              initial="hidden"
-              whileInView="show"
-              viewport={viewport}
-              variants={reveal}
-              className="mx-auto mt-12 max-w-3xl border-t border-primary/20 pt-8 text-sm leading-relaxed text-muted-foreground"
-            >
-              We didn't design this from an office. We built it sitting with eye clinics like yours, day after
-              day, shaped by how you actually work, not how a software company imagines you do.
-            </motion.p>
-          </header>
+        <div className="mx-auto max-w-6xl px-4 pb-12 pt-16 sm:px-6 sm:pb-16 lg:pb-24">
 
           {/* Hero product shot */}
           <motion.div
