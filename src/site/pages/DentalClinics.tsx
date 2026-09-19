@@ -1,4 +1,5 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -107,39 +108,20 @@ const coreGroups = [
 const DentalClinics = () => {
   return (
     <Layout>
+      <PageHero
+        eyebrow="Clinexus for dental clinics"
+        title="You didn't train for years to fight paperwork."
+        description="We built Clinexus sitting with dental clinics like yours: busy chairs, real patients, real days. Everything below exists because a clinic like yours asked for it, not because a software company guessed."
+        primaryCta={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+        secondaryCta={{ label: "See the full feature list", href: "/industries/dental-clinics/features" }}
+        points={[
+          { value: "3–4 hrs", label: "Admin time given back each day" },
+          { value: "40%", label: "Fewer no-shows with automatic reminders" },
+          { value: "9", label: "Staff roles with their own access" },
+        ]}
+      />
       <div className="eye-theme overflow-x-hidden">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-24">
-          <header className="mb-16 text-center lg:mb-24">
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-primary"
-            >
-              Clinexus for Dental Clinics
-            </motion.p>
-
-            <motion.h1
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              className="mx-auto mb-6 max-w-4xl text-3xl font-bold leading-tight text-foreground sm:text-4xl md:mb-8 md:text-6xl"
-            >
-              You didn't train for years{" "}
-              <span className="text-primary">to fight paperwork.</span>
-            </motion.h1>
-            <motion.div initial="hidden" animate="show" variants={reveal} transition={{ delay: 0.3 }} className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
-              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-4 font-bold text-primary-foreground transition-colors hover:bg-foreground sm:w-auto sm:px-10">
-                <MessageCircle className="h-5 w-5" /> Talk to us on WhatsApp
-              </a>
-              <Link to="/industries/dental-clinics/features" className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-primary px-6 py-4 font-bold text-primary transition-colors hover:bg-primary/10 sm:w-auto sm:px-10">
-                See the full feature list <ArrowRight className="h-4 w-4" />
-              </Link>
-            </motion.div>
-            <motion.p initial="hidden" whileInView="show" viewport={viewport} variants={reveal} className="mx-auto mt-12 max-w-3xl border-t border-primary/20 pt-8 text-sm leading-relaxed text-muted-foreground">
-              We built Clinexus sitting with dental clinics like yours: busy chairs, real patients, real days. Everything below exists because a clinic like yours asked for it, not because a software company guessed.
-            </motion.p>
-          </header>
+        <div className="mx-auto max-w-6xl px-4 pb-12 pt-16 sm:px-6 sm:pb-16 lg:pb-24">
 
           <section id="features" className="scroll-mt-24">
             <motion.h2 initial="hidden" whileInView="show" viewport={viewport} variants={reveal} className="mb-4 text-2xl font-bold text-foreground md:text-3xl">

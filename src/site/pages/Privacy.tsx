@@ -1,6 +1,6 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
-import { Shield } from "lucide-react";
 
 const sections = [
   { title: "1. Information We Collect", content: "We collect information you provide when creating an account (name, email, clinic name, phone number), as well as usage data such as pages visited, features used, and device information. Patient data entered into Clinexus is stored securely and remains owned entirely by your clinic. We never access patient records without your explicit authorization." },
@@ -18,23 +18,16 @@ const Privacy = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[hsl(var(--medical-blue-dark))] py-20 md:py-28">
-        <div className="pointer-events-none absolute inset-0 " />
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
-          >
-            <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[hsl(var(--primary))]/20">
-              <Shield className="h-7 w-7 text-[hsl(var(--medical-teal))]" />
-            </div>
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">Privacy Policy</h1>
-            <p className="text-white/60">Last updated: February 2026</p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Privacy policy"
+        title="Your patients' data, protected like it's our own."
+        description="Last updated: February 2026. This policy explains exactly what we collect, how we use it, and the measures we take to protect it."
+        points={[
+          { value: "256-bit", label: "AES encryption at rest, TLS 1.3 in transit" },
+          { value: "72 hrs", label: "Breach notification commitment" },
+          { value: "100%", label: "Of your clinic's data owned by you" },
+        ]}
+      />
 
       {/* Content */}
       <section className="relative site-section-light overflow-hidden py-20">

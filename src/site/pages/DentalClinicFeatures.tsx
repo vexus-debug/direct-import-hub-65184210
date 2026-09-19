@@ -1,4 +1,5 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { LocalSeo } from "@/site/components/LocalSeo";
@@ -206,66 +207,20 @@ const roles = [
 const DentalClinicFeatures = () => {
   return (
     <Layout>
+      <PageHero
+        eyebrow="Clinexus for dental clinics, Features"
+        title="Everything your dental practice runs on, in one workspace."
+        description="Clinexus is a multi-clinic platform, dental, eye care and diagnostic centres. A dental practice gets its own workspace with a sidebar built around dentistry, plus every part of running a practice underneath it. Here's what that gives you, day to day."
+        primaryCta={{ label: "Talk to us on WhatsApp", href: WHATSAPP, external: true }}
+        secondaryCta={{ label: "See the dental clinic overview", href: "/industries/dental-clinics" }}
+        points={[
+          { value: "30+", label: "Modules covering every part of the practice" },
+          { value: "1", label: "Workspace for clinical work and the money side" },
+          { value: "9", label: "Staff roles with their own access" },
+        ]}
+      />
       <div className="eye-theme">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          {/* Hero */}
-          <header className="mb-24 text-center">
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-primary"
-            >
-              Clinexus for Dental Clinics, Features
-            </motion.p>
-
-            <motion.h1
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              className="mx-auto mb-8 max-w-4xl text-4xl font-bold leading-tight text-foreground md:text-6xl"
-            >
-              Everything your dental practice runs on, in{" "}
-              <span className="text-primary">one workspace</span>.
-            </motion.h1>
-
-            <motion.p
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              transition={{ delay: 0.12 }}
-              className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground"
-            >
-              Clinexus is a multi-clinic platform, dental, eye care and diagnostic centres. A dental
-              practice gets its own workspace with a sidebar built around dentistry, plus every part of
-              running a practice underneath it. Here's what that gives you, day to day.
-            </motion.p>
-
-            <motion.div
-              initial="hidden"
-              animate="show"
-              variants={reveal}
-              transition={{ delay: 0.24 }}
-              className="flex flex-col items-center justify-center gap-4 md:flex-row"
-            >
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-10 py-4 font-bold text-primary-foreground transition-colors hover:bg-foreground"
-              >
-                <MessageCircle className="h-5 w-5" />
-                Talk to us on WhatsApp
-              </a>
-              <Link
-                to="/industries/dental-clinics"
-                className="inline-flex items-center gap-2 rounded-md border border-primary px-10 py-4 font-bold text-primary transition-colors hover:bg-primary/10"
-              >
-                See the dental clinic overview
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </motion.div>
-          </header>
+        <div className="mx-auto max-w-6xl px-6 pb-24 pt-16">
 
           {/* Dental-specific modules */}
           <motion.h2
