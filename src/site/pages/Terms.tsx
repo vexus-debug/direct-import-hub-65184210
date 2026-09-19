@@ -1,6 +1,6 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
-import { FileText } from "lucide-react";
 
 const sections = [
   { title: "1. Acceptance of Terms", content: "By accessing or using Clinexus, you agree to be bound by these Terms of Service. If you do not agree, please do not use the service. These terms apply to all users, including clinic administrators, staff, and any authorized personnel." },

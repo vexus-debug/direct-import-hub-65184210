@@ -1,6 +1,6 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
-import { Shield } from "lucide-react";
 
 const sections = [
   { title: "1. Information We Collect", content: "We collect information you provide when creating an account (name, email, clinic name, phone number), as well as usage data such as pages visited, features used, and device information. Patient data entered into Clinexus is stored securely and remains owned entirely by your clinic. We never access patient records without your explicit authorization." },

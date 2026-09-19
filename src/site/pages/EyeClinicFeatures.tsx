@@ -1,4 +1,5 @@
 import Layout from "@/site/components/Layout";
+import PageHero from "@/site/components/PageHero";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { LocalSeo } from "@/site/components/LocalSeo";
